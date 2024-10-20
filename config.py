@@ -1,5 +1,5 @@
 # Config file for Twitter API Keys and other settings
-CONSUMER_KEY = 'YOUR_CONSUMER_KEY'
-CONSUMER_SECRET = 'YOUR_CONSUMER_SECRET'
-ACCESS_TOKEN = 'YOUR_ACCESS_TOKEN'
-ACCESS_TOKEN_SECRET = 'YOUR_ACCESS_TOKEN_SECRET'
+CONSUMER_KEY = 'e pi ai consumer'
+CONSUMER_SECRET = 'e pi ai consumer sikret'
+ACCESS_TOKEN = 'token'
+ACCESS_TOKEN_SECRET = 'token sikret'
