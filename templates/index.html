@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Twitter Sentiment Analysis</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Twitter Sentiment Analysis</h1>
+    <form action="/analyze" method="POST">
+        <input type="text" name="query" placeholder="Enter keyword or hashtag" required>
+        <button type="submit">Analyze</button>
+    </form>
+    
+    {% if query %}
+        <h2>Results for "{{ query }}"</h2>
+        <p>Positive: {{ sentiment_scores.positive }}</p>
+        <p>Negative: {{ sentiment_scores.negative }}</p>
+        <p>Neutral: {{ sentiment_scores.neutral }}</p>
+        
+        <h3>Tweets:</h3>
+        <ul>
+        {% for tweet in tweets %}
+            <li>{{ tweet.text }} (Sentiment: {{ tweet.sentiment }})</li>
+        {% endfor %}
+        </ul>
+    {% endif %}
+</body>
+</html>
